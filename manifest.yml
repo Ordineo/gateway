@@ -9,3 +9,5 @@ applications:
   path: target/gateway-1.0.0-SNAPSHOT.jar
   buildpack: https://github.com/cloudfoundry/java-buildpack
   timeout: 120
+  services:
+    - registry
