@@ -39,7 +39,6 @@ public class AuthenticationRestController {
     @RequestMapping(value = "${jwt.route.authentication.path}", method = RequestMethod.POST)
     public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtAuthenticationRequest authenticationRequest) throws AuthenticationException {
 
-        // Perform the security
         final Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         authenticationRequest.getUsername(),
@@ -47,13 +46,10 @@ public class AuthenticationRestController {
                 )
         );
         SecurityContextHolder.getContext().setAuthentication(authentication);
-
-        // Reload password post-security so we can generate token
         final UserDetails userDetails = userDetailsService.loadUserByUsername(authenticationRequest.getUsername());
         final String token = jwtTokenUtil.generateToken(userDetails);
 
-        // Return the token
-        return ResponseEntity.ok(new JwtAuthenticationResponse(token));
+         return ResponseEntity.ok(new JwtAuthenticationResponse(token));
     }
 
     @RequestMapping(value = "${jwt.route.authentication.refresh}", method = RequestMethod.GET)

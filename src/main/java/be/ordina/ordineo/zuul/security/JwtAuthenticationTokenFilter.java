@@ -40,8 +40,6 @@ public class JwtAuthenticationTokenFilter extends UsernamePasswordAuthentication
 
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         String authToken = httpRequest.getHeader(this.tokenHeader);
-        // authToken.startsWith("Bearer ")
-        // String authToken = header.substring(7);
         String username = jwtTokenUtil.getUsernameFromToken(authToken);
 
         if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
