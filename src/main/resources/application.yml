@@ -2,8 +2,13 @@ server:
   port: ${PORT:9900}
 debug: true
 spring:
-  aop:
-    proxy-target-class: true
+  redis:
+      host: pub-redis-15392.us-east-1-4.4.ec2.garantiadata.com
+      database: 0
+      port: 15392
+      password: 360T00l
+#  aop:
+#    proxy-target-class: true
 jwt:
   header: Authorization
   secret: 360t00l
@@ -16,17 +21,21 @@ jwt:
 ---
 eureka:
   client:
+    registerWithEureka: true
+    fetchRegistry: true
     serviceUrl:
-      defaultZone: https://eureka-ordineo.cfapps.io/eureka/ #http://localhost:8761/eureka/
+      defaultZone:  https://eureka-ordineo.cfapps.io/eureka/ #http://localhost:8761/eureka/
 ribbon:
   IsSecure: true
 ---
-zuul:
- routes:
-    resource:
-      path: /resource/**
-      url: http://employee-ordineo.cfapps.io/
-      sensitive-headers:
+#zuul:
+#  ignoredServices: "*"
+#  routes:
+#    employees:
+#      path: /api/employees/**
+#      serviceId: employee-ordineo
+#      stripPrefix: false
+#      sensitive-headers:
 logging:
   level:
     org.springframework.security: DEBUG

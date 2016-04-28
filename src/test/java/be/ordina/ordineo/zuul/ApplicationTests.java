@@ -10,9 +10,6 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes =ZuulApplication.class)
-@WebAppConfiguration
-@IntegrationTest("server.port=0")
-@DirtiesContext
 public class ApplicationTests {
 
 	@Test
