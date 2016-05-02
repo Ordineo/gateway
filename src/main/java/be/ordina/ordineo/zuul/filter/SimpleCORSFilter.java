@@ -26,12 +26,12 @@ public class SimpleCORSFilter implements Filter {
         String originHeader = request.getHeader("Origin");
 
         if (Arrays.asList(allowOrigins).contains( originHeader )) {
-            response.addHeader("Access-Control-Allow-Origin", originHeader);
+            response.setHeader("Access-Control-Allow-Origin", originHeader);
             response.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, OPTIONS, DELETE, PATCH, HEAD, TRACE");
             response.setHeader("Access-Control-Max-Age", "3600");
-            response.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-            response.addHeader("Access-Control-Expose-Headers", "location");
-            response.addHeader("Access-Control-Allow-Credentials", "true");
+            response.setHeader("Access-Control-Allow-Headers", "Origin, x-auth-token, Authorization X-Requested-With, Content-Type, Accept");
+            response.setHeader("Access-Control-Expose-Headers", "location");
+            response.setHeader("Access-Control-Allow-Credentials", "true");
         }
 
         chain.doFilter(request, response);

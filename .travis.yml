@@ -14,8 +14,6 @@ deploy:
   on:
     repo: Ordineo/gateway
     branch: master
-after_deploy:
-- mvn clean test jacoco:report coveralls:report
 notifications:
   slack:
     secure: JkT3RYroRoUqTUbAhLaaAdNxneWh2cq22yNqBizqrErHtXH6DA7W08kAy5USbs9yf50iwdcEIo1poJ7pZxavyWIB4WMPUd2dZF/40GWyhz4v0OHiQ42EhM7Fa/uVJxVitEwsiKoCqAm4/B53+/VRHtCIWjYnUOcvGOWCBrGjbufj4wO4/GuDPBuYT4UjD8DGlos2PLx2pqfumyx60wRi76ff/79KaqATXVcOEhAwNrJPzKNO5o1tg7Eu0SUOuI0C+rEPJbPetv0nN8cKliAzGYJbMGUNIz7zg8CnPDzVgmmQAAGfeNC/q817RfqgcJZO6+/QH+0DbMhQ3J/u6QzKXlqd+p9R6Sn4YZhVQlwzi3zECU/zJ/Mm49eW1g3qamXE+V6ukUcV2uoK4bMJgDgbGwewbEDf0UJPZhM69XqlallXNRUfzxd4QpfKrbS5zMh2v2k1Kc3c1d2ASCy2Il3LM56UHIE/XYWozZ+eJ3TPS0Xal51zexuQKzB+dBBdApqRRl4n0gu2DRp2jKNHMiUH8hhXppi+LX8awzn3bwiWX8YKILHXsfzCq3I4tknr1TsKxVIUpUaAGQXEe8xjxqtYZWozq3fjo7cYGzQFfGhqWI2D99E6+loi7n+CzkkSAwAJbVLYfMMg6OMRQCVgP1fjYpa67EhOixvzP8qWX6FKflk=
