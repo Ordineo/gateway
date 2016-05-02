@@ -24,18 +24,25 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone:  https://eureka-ordineo.cfapps.io/eureka/ #http://localhost:8761/eureka/
-ribbon:
-  IsSecure: true
+      defaultZone:  http://localhost:8761/eureka/ #https://eureka-ordineo.cfapps.io/eureka/
+  instance:
+    secure-port-enabled: true
+#ribbon:
+#  IsSecure: true
 ---
-#zuul:
-#  ignoredServices: "*"
-#  routes:
-#    employees:
-#      path: /api/employees/**
-#      serviceId: employee-ordineo
-#      stripPrefix: false
-#      sensitive-headers:
+zuul:
+  ignoredServices: "*"
+  routes:
+    milestones:
+      path: /api/milestones/**
+      serviceId: milestone-ordineo
+      stripPrefix: false
+      sensitive-headers:
+    employees:
+      path: /api/employees/**
+      serviceId: employee-ordineo
+      stripPrefix: false
+      sensitive-headers:
 logging:
   level:
     org.springframework.security: DEBUG
