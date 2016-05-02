@@ -1,12 +1,6 @@
 server:
   port: ${PORT:9900}
 debug: true
-spring:
-  redis:
-      host: pub-redis-15392.us-east-1-4.4.ec2.garantiadata.com
-      database: 0
-      port: 15392
-      password: 360T00l
 #  aop:
 #    proxy-target-class: true
 jwt:
