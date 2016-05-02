@@ -3,10 +3,10 @@ server:
 debug: true
 spring:
   redis:
-      host: pub-redis-15392.us-east-1-4.4.ec2.garantiadata.com
+      host: pub-redis-13436.us-east-1-2.3.ec2.garantiadata.com
       database: 0
-      port: 15392
-      password: 360T00l
+      port: 13436
+      password: YjextjkV2pYuJNh1
 #  aop:
 #    proxy-target-class: true
 jwt:
