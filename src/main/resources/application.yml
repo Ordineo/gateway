@@ -28,7 +28,7 @@ eureka:
   instance:
     secure-port-enabled: true
 ribbon:
-  isSecure: true
+  IsSecure: true
 ---
 zuul:
   routes:
