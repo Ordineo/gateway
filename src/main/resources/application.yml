@@ -30,17 +30,16 @@ eureka:
     secure-port: ${server.port}
     non-secure-port-enabled: false
 ribbon:
-  eureka:
-    enabled: true
+  IsSecure: true
 ---
 zuul:
   routes:
-    milestones:
+    milestone-ordineo:
       path: /milestone-ordineo/**
       serviceId: milestone-ordineo
       stripPrefix: false
       sensitive-headers:
-    employees:
+    employee-ordineo:
       path: /employee-ordineo/**
       serviceId: employee-ordineo
       stripPrefix: false
