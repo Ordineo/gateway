@@ -36,7 +36,6 @@ zuul:
   ignored-services: "*"
   health:
     enabled: true
-  ssl: true
   routes:
     milestones:
       path: /milestone-ordineo/**
