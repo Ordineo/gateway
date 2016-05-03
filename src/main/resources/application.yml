@@ -32,24 +32,22 @@ eureka:
 ribbon:
   IsSecure: true
 ---
-zuul:
-  ignored-services: "*"
-  health:
-    enabled: true
-  routes:
-    milestones:
-      path: /milestone-ordineo/**
-      serviceId: milestone-ordineo
-      stripPrefix: false
-      sensitive-headers:
-    employees:
-      path: /employee-ordineo/**
-      serviceId: employee-ordineo
-      stripPrefix: false
-      sensitive-headers:
+#zuul:
+#  ignored-services: "*"
+#  routes:
+#    milestones:
+#      path: /milestone-ordineo/**
+#      serviceId: milestone-ordineo
+#      stripPrefix: false
+#      sensitive-headers:
+#    employees:
+#      path: /employee-ordineo/**
+#      serviceId: employee-ordineo
+#      stripPrefix: false
+#      sensitive-headers:
 logging:
   level:
-    org.springframework.security: INFO
+    org.springframework.security: DEBUG
 spring:
   profiles: cloud
 server:
