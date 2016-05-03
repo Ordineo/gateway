@@ -21,11 +21,8 @@ eureka:
       defaultZone:  https://eureka-ordineo.cfapps.io/eureka/ #http://localhost:8761/eureka/
   instance:
     secure-port-enabled: true
-    secure-port: ${server.port}
-    non-secure-port-enabled: false
 ribbon:
-  eureka:
-    enabled: true
+  isSecure: true
 ---
 zuul:
   routes:
