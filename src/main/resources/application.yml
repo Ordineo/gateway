@@ -34,12 +34,12 @@ ribbon:
 ---
 zuul:
   routes:
-    milestone-ordineo:
+    milestones:
       path: /milestone-ordineo/**
       serviceId: milestone-ordineo
       stripPrefix: false
       sensitive-headers:
-    employee-ordineo:
+    employees:
       path: /employee-ordineo/**
       serviceId: employee-ordineo
       stripPrefix: false
