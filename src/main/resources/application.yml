@@ -24,7 +24,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone:  https://eureka-ordineo.cfapps.io/eureka/ #http://localhost:8761/eureka/
+      defaultZone: https://eureka-ordineo.cfapps.io/eureka/  #http://localhost:8761/eureka/
   instance:
     secure-port-enabled: true
     secure-port: ${server.port}
@@ -36,7 +36,6 @@ zuul:
   ignored-services: "*"
   health:
     enabled: true
-  ssl: true
   routes:
     milestones:
       path: /milestone-ordineo/**
