@@ -61,6 +61,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .userDetailsService(this.userDetailsService)
                 .passwordEncoder(passwordEncoder());
         authenticationManagerBuilder.inMemoryAuthentication().withUser("Nivek").password("password").roles("USER");
+        authenticationManagerBuilder.inMemoryAuthentication().withUser("PhDa").password("password").roles("USER","ADMIN");
+        authenticationManagerBuilder.inMemoryAuthentication().withUser("RyDg").password("password").roles("USER","ADMIN");
     }
 
     @Bean
