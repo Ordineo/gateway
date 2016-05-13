@@ -1,6 +1,5 @@
 server:
   port: ${PORT:9900}
-debug: true
 #spring:
 #   redis:
 #       host: pub-redis-10962.us-east-1-2.5.ec2.garantiadata.com
